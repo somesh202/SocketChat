@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.app > .cont {
+    display: none;
+}
+.app > .cont.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cont .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 400px;
+}
+.cont .form-input {
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 0.8em;
+}
+.cont .form-input .uname{
+    font-size: 1em;
+}
+.cont h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #111;
+    border-bottom: 4px solid #555;
+    padding: 5px 0px;
+    display: inline-block;
+}
+.cont .form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+.cont .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 1.2em;
+}
+.cont .form-input button {
+    padding: 10px 20px;
+    background: #140e23;
+    color: #eee;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.chat-cont .header {
+    background: #130d1f;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.chat-cont .header .logo {
+    font-size: 1.2em;
+    color: #eee;
+    font-weight: 600;
+}
+.chat-cont .header button {
+    padding: 5px 10px;
+    border:  1px solid #eee;
+    background: transparent;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.chat-cont .mssgs {
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #f5f5f5;
+    overflow: auto;
+}
+.chat-cont .mssgs .mssg {
+    display: flex;
+    padding: 20px;
+}
+
+.chat-cont .mssgs .mssg > div {
+    max-width: 80%;
+    background: #fff;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    padding: 10px;
+}
+.chat-cont .mssgs .mssg.rec-mssg {
+    justify-content: flex-end;
+}
+.chat-cont .mssgs .mssg.sender-mssg {
+    justify-content: flex-start;
+}
+.chat-cont .mssgs .mssg .name {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.chat-cont .mssgs .mssg .text {
+    word-wrap: break-word;
+}
+.chat-cont .mssgs .popup {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+.chat-cont .typebox {
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.chat-cont .typebox input {
+    flex: 1;
+    height: 40px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: 1.0em;
+}
+.chat-cont .typebox button {
+    width: 80px;
+    height: 100%;
+    background-color: #210b35;
+    color: #eee;
+    font-size: 1.0em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
